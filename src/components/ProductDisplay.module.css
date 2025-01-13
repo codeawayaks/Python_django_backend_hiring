@@ -427,8 +427,7 @@
 .button {
   cursor: pointer;
   border: 1px solid var(--color-gainsboro);
-  padding: var(--padding-8xs) var(--padding-4xs) var(--padding-8xs)
-    var(--padding-smi);
+  padding: 5px 8px;
   background-color: var(--color-gray-300);
   border-radius: var(--br-9xs);
   display: flex;
@@ -461,8 +460,11 @@
 .button1 {
   cursor: pointer;
   border: 0;
-  padding: var(--padding-6xs) var(--padding-4xs) var(--padding-6xs)
-    var(--padding-xs);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-royalblue);
 }
 .button1:hover {
@@ -471,8 +473,11 @@
 .button2 {
   background-color: var(--color-gray-300);
   border: 1px solid var(--color-gainsboro);
-  padding: var(--padding-8xs) var(--padding-3xs) var(--padding-8xs)
-    var(--padding-smi);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .div12 {
   position: relative;
@@ -483,12 +488,11 @@
   border-radius: var(--br-9xs);
   background-color: var(--color-gray-300);
   border: 1px solid var(--color-gainsboro);
+  width: 30px;
+  height: 30px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-8xs) var(--padding-4xs) var(--padding-8xs)
-    var(--padding-smi);
+  justify-content: center;
+  align-items: center;
 }
 .next {
   position: relative;

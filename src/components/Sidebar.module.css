@@ -66,15 +66,15 @@
 .button {
   cursor: pointer;
   border: 1px solid var(--color-royalblue);
-  padding: var(--padding-5xs) var(--padding-xs) var(--padding-4xs)
-    var(--padding-mid);
+  padding: 5px 10px;
   background-color: var(--color-gray-300);
   align-self: stretch;
   height: 38px;
   border-radius: var(--br-7xs);
   box-sizing: border-box;
-  flex-direction: row;
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button:hover {
   background-color: var(--color-darkslategray-200);
@@ -104,10 +104,11 @@
   gap: var(--gap-xl);
 }
 .sidebar {
-  width: 1414px;
+  width: 1248px;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 var(--padding-80xl);
+  /* padding: 0 var(--padding-80xl); */
+  margin: auto;
   text-align: left;
   font-size: var(--font-size-lg);
   color: var(--color-black);

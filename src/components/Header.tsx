@@ -30,13 +30,13 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
         <div className={styles.johnSmithWrapper}>
           <a className={styles.johnSmith}>John Smith</a>
         </div>
-        <div className={styles.userActionsContainerWrapper}>
+        {/* <div className={styles.userActionsContainerWrapper}>
           <img
             className={styles.userActionsContainer}
             alt=""
             src="/frame-1.svg"
           />
-        </div>
+        </div> */}
       </div>
     </header>
   );
