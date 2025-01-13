@@ -1,0 +1,142 @@
+.mostExpensiveProduct {
+  position: relative;
+  font-weight: 500;
+}
+.premiumWirelessHeadphones {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: inherit;
+}
+.electronics {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 16px;
+  color: var(--color-slategray);
+  display: inline-block;
+  min-width: 85px;
+}
+.expensiveProductName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.expensiveProductPrice {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  line-height: 24px;
+  display: inline-block;
+  color: var(--color-royalblue);
+  min-width: 103px;
+}
+.expensiveProductDetails,
+.expensiveProductInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.expensiveProductDetails {
+  gap: var(--gap-mini);
+  font-size: var(--font-size-xl);
+}
+.expensiveProductInfo {
+  gap: var(--gap-3xl);
+}
+.updateStock {
+  flex: 1;
+  position: relative;
+  font-size: var(--component-body-regular-size);
+  font-weight: 500;
+  font-family: var(--component-body-regular);
+  color: var(--color-royalblue);
+  text-align: center;
+  display: inline-block;
+  min-width: 93px;
+}
+.button,
+.stockUpdate {
+  display: flex;
+  align-items: flex-start;
+}
+.button {
+  cursor: pointer;
+  border: 1px solid var(--color-royalblue);
+  padding: var(--padding-5xs) var(--padding-xs) var(--padding-4xs)
+    var(--padding-mid);
+  background-color: var(--color-gray-300);
+  align-self: stretch;
+  height: 38px;
+  border-radius: var(--br-7xs);
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.button:hover {
+  background-color: var(--color-darkslategray-200);
+  border: 1px solid var(--color-dodgerblue);
+  box-sizing: border-box;
+}
+.stockUpdate {
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-3xl);
+}
+.div,
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.div {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gainsboro);
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--padding-7xl) var(--padding-6xl) var(--padding-11xl);
+  gap: var(--gap-xl);
+}
+.sidebar {
+  width: 1414px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-80xl);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-black);
+  font-family: var(--component-body-regular);
+}
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    padding-left: var(--padding-30xl);
+    padding-right: var(--padding-30xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .div {
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .premiumWirelessHeadphones {
+    font-size: var(--font-size-base);
+    line-height: 16px;
+  }
+  .expensiveProductPrice {
+    font-size: var(--font-size-lgi);
+    line-height: 19px;
+  }
+}
