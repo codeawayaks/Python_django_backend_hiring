@@ -1,5 +1,112 @@
-.div,
-.featuredProductHeader {
+.createProductButtonIcon1 {
+  width: 14px;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createProductButtonIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.createProduct {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-base);
+  font-family: var(--component-body-regular);
+  color: var(--color-white);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xs) var(--padding-sm) var(--padding-3xs)
+    var(--padding-base);
+  background-color: var(--color-royalblue);
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.select {
+  width: 160px;
+  height: 40px;
+  font-family: var(--component-body-regular);
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+}
+.actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xl);
+}
+.select1 {
+  height: 40px;
+  width: 146px;
+  font-family: var(--component-body-regular);
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+}
+.actionsAndFilters,
+.contentWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.actionsAndFilters {
+  margin: 0;
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: var(--gap-5xs);
+}
+.contentWrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-12xs) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.input {
+  border: 0;
+  background-color: transparent;
+  width: 320px;
+  font-family: var(--component-body-regular);
+  font-size: var(--font-size-base);
+  color: var(--color-darkgray);
+}
+.contentWrapperParent,
+.pageContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.contentWrapperParent {
+  width: 1248px;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.pageContent {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+}
+.featuredProduct {
+  position: relative;
+  font-weight: 600;
+}
+.contentColumn,
+.div1 {
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -8,7 +115,7 @@
   box-sizing: border-box;
   max-width: 100%;
 }
-.div {
+.div1 {
   flex: 1;
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
@@ -16,7 +123,7 @@
   padding: var(--padding-xl) var(--padding-mid);
   flex-shrink: 0;
 }
-.featuredProductHeader {
+.contentColumn {
   height: 314px;
   padding: 0 0 var(--padding-169xl);
   font-size: var(--font-size-lg);
@@ -29,7 +136,7 @@
   height: 20px;
   overflow: hidden;
 }
-.div1 {
+.div2 {
   height: 44px;
   width: 46.5px;
   position: relative;
@@ -46,7 +153,7 @@
   line-height: 16px;
   color: var(--color-dimgray);
 }
-.premiumWirelessHeadphonesParent {
+.productNameAndCategory {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -54,13 +161,13 @@
   justify-content: flex-start;
   gap: var(--gap-5xs);
 }
-.featuredProductStock {
+.productImage {
   flex-direction: row;
   gap: var(--gap-base);
 }
-.featuredProductStock,
-.featuredProductStockStatus,
-.span {
+.productImage,
+.span,
+.stockStatusWrapper {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -72,25 +179,25 @@
   padding: var(--padding-8xs) var(--padding-2xs) var(--padding-7xs)
     var(--padding-xs);
 }
-.featuredProductStockStatus {
+.stockStatusWrapper {
   flex-direction: column;
   padding: var(--padding-5xs) 0 0;
   font-size: var(--component-body-regular-size);
   color: var(--color-seagreen);
 }
-.featuredProductAttributes,
-.featuredProductDescription {
+.productDetailsContent,
+.productImageWrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   max-width: 100%;
 }
-.featuredProductAttributes {
+.productImageWrapper {
   flex: 1;
   justify-content: space-between;
   gap: var(--gap-xl);
 }
-.featuredProductDescription {
+.productDetailsContent {
   align-self: stretch;
   justify-content: flex-start;
   padding: 0 var(--padding-base);
@@ -129,10 +236,6 @@
   padding: 0 var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
-.price {
-  position: relative;
-  font-weight: 600;
-}
 .headerPriceSort {
   width: 8.8px;
   height: 14px;
@@ -141,14 +244,14 @@
   flex-shrink: 0;
 }
 .headerActions,
+.headerPlaceholder,
 .headerPrice,
-.headerPriceIcon,
 .thead {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.headerPriceIcon {
+.headerPlaceholder {
   flex-direction: column;
   padding: var(--padding-11xs-8) 0 0;
 }
@@ -181,7 +284,7 @@
   display: inline-block;
   min-width: 41px;
 }
-.productIdCells {
+.itemDetails {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -191,7 +294,7 @@
 .wirelessHeadphones {
   position: relative;
 }
-.productNameCells {
+.itemName {
   width: 227px;
   display: flex;
   flex-direction: column;
@@ -206,8 +309,8 @@
   display: inline-block;
   min-width: 75px;
 }
-.productCategoryValues,
-.productPriceCells,
+.itemCategoryValues,
+.itemStock,
 .span1 {
   display: flex;
   flex-direction: column;
@@ -215,7 +318,7 @@
   justify-content: flex-start;
   padding: var(--padding-9xs) var(--padding-xl) 0 0;
 }
-.productPriceCells,
+.itemStock,
 .span1 {
   padding: var(--padding-9xs) var(--padding-6xs) 0 0;
   color: var(--color-gray-200);
@@ -235,21 +338,23 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.productActionCells {
+.itemCategory,
+.itemPrice,
+.tr {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
+}
+.itemPrice {
+  flex-direction: column;
   justify-content: flex-start;
   padding: var(--padding-8xs) 0 0;
 }
-.productCategoryCells,
+.itemCategory,
 .tr {
-  display: flex;
   flex-direction: row;
-  align-items: flex-start;
   max-width: 100%;
 }
-.productCategoryCells {
+.itemCategory {
   width: 576.2px;
   justify-content: space-between;
   gap: var(--gap-xl);
@@ -262,7 +367,7 @@
   box-sizing: border-box;
   gap: var(--gap-100xl-9);
 }
-.div2,
+.div3,
 .smartWatch {
   position: relative;
   display: inline-block;
@@ -330,7 +435,7 @@
   justify-content: flex-start;
   padding: var(--padding-9xs) var(--padding-xs) 0 0;
 }
-.div6 {
+.div7 {
   position: relative;
   display: inline-block;
   min-width: 49px;
@@ -346,7 +451,7 @@
     var(--padding-5xs);
   color: var(--color-brown);
 }
-.button:hover,
+.button1:hover,
 .tr2 {
   box-sizing: border-box;
 }
@@ -381,7 +486,7 @@
   position: relative;
   line-height: 14px;
 }
-.tableFooter {
+.paginationInfo {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -394,21 +499,21 @@
   font-size: var(--component-body-regular-size);
   color: var(--color-dimgray);
 }
-.featuredProductDetails,
-.featuredProductInfo,
+.productDetails,
+.productDetailsContainer,
 .productTable {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 100%;
 }
-.featuredProductInfo {
+.productDetailsContainer {
   flex: 1;
   flex-direction: column;
   gap: var(--gap-25xl);
   flex-shrink: 0;
 }
-.featuredProductDetails {
+.productDetails {
   align-self: stretch;
   flex-direction: row;
   padding: 0 var(--padding-12xs);
@@ -424,7 +529,7 @@
   display: inline-block;
   min-width: 67px;
 }
-.button {
+.button1 {
   cursor: pointer;
   border: 1px solid var(--color-gainsboro);
   padding: var(--padding-8xs) var(--padding-4xs) var(--padding-8xs)
@@ -436,11 +541,11 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.button:hover {
+.button1:hover {
   background-color: var(--color-darkslategray-200);
   border: 1px solid var(--color-lightgray-100);
 }
-.div10 {
+.div11 {
   flex: 1;
   position: relative;
   font-size: var(--font-size-base);
@@ -450,36 +555,36 @@
   display: inline-block;
   min-width: 9px;
 }
-.button1,
-.button2 {
+.button2,
+.button3 {
   border-radius: var(--br-9xs);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.button1 {
+.button2 {
   cursor: pointer;
   border: 0;
   padding: var(--padding-6xs) var(--padding-4xs) var(--padding-6xs)
     var(--padding-xs);
   background-color: var(--color-royalblue);
 }
-.button1:hover {
+.button2:hover {
   background-color: var(--color-dodgerblue);
 }
-.button2 {
+.button3 {
   background-color: var(--color-gray-300);
   border: 1px solid var(--color-gainsboro);
   padding: var(--padding-8xs) var(--padding-3xs) var(--padding-8xs)
     var(--padding-smi);
 }
-.div12 {
+.div13 {
   position: relative;
   display: inline-block;
   min-width: 12px;
 }
-.button3 {
+.button4 {
   border-radius: var(--br-9xs);
   background-color: var(--color-gray-300);
   border: 1px solid var(--color-gainsboro);
@@ -497,52 +602,55 @@
   color: var(--color-black);
   text-align: center;
 }
-.div8,
+.contentAndSidebar,
+.div,
+.div10,
 .div9 {
-  box-sizing: border-box;
-  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
 }
-.div9 {
+.div10 {
   flex: 1;
   background-color: var(--color-gray-300);
   border-top: 1px solid var(--color-gainsboro);
+  box-sizing: border-box;
   overflow-x: auto;
-  display: flex;
-  align-items: flex-start;
+  flex-direction: row;
   justify-content: flex-end;
   padding: var(--padding-mini) var(--padding-5xl) var(--padding-base);
   gap: var(--gap-5xs);
-  max-width: 100%;
 }
-.div8 {
+.contentAndSidebar,
+.div,
+.div9 {
+  justify-content: flex-start;
+}
+.div9 {
   align-self: stretch;
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   border: 1px solid var(--color-gainsboro);
-  justify-content: flex-start;
+  box-sizing: border-box;
+  flex-direction: row;
   padding: var(--padding-191xl) 0 0;
   flex-shrink: 0;
   margin-top: -251px;
   text-align: center;
 }
-.div8,
-.featuredProduct,
-.productDisplay {
-  display: flex;
-  align-items: flex-start;
-  max-width: 100%;
-}
-.featuredProduct {
-  width: 1248px;
+.contentAndSidebar,
+.div {
   flex-direction: column;
-  justify-content: flex-start;
 }
-.productDisplay {
+.contentAndSidebar {
+  width: 1248px;
+}
+.div {
   align-self: stretch;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 var(--padding-xl);
+  background-color: var(--color-whitesmoke);
+  padding: 0 0 var(--padding-5xl);
   box-sizing: border-box;
+  gap: var(--gap-5xl);
   text-align: left;
   font-size: var(--font-size-base);
   color: var(--color-black);
@@ -565,6 +673,15 @@
   }
 }
 @media screen and (max-width: 1050px) {
+  .button {
+    text-align: center;
+    align-self: stretch;
+    width: auto;
+    min-width: 168;
+  }
+  .actions {
+    flex: 1;
+  }
   .id {
     width: 100%;
     height: 15px;
@@ -574,7 +691,8 @@
   }
 }
 @media screen and (max-width: 750px) {
-  .featuredProductAttributes {
+  .contentWrapperParent,
+  .productImageWrapper {
     flex-wrap: wrap;
   }
   .headerActions {
@@ -592,7 +710,7 @@
   .tr2 {
     gap: var(--gap-10xl);
   }
-  .featuredProductInfo {
+  .productDetailsContainer {
     gap: var(--gap-3xl);
   }
 }
@@ -600,7 +718,7 @@
   .headerActions {
     gap: var(--gap-10xl);
   }
-  .productCategoryCells {
+  .itemCategory {
     flex-wrap: wrap;
   }
 }

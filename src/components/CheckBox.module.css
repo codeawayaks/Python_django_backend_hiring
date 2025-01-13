@@ -1,0 +1,19 @@
+.basecheckboxstates {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+}
+.checkbox {
+  width: 120px;
+  height: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  text-align: left;
+  font-size: var(--component-body-regular-size);
+  color: var(--neutrals-text-primary);
+  font-family: var(--component-body-regular);
+}

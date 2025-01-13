@@ -1,37 +1,27 @@
-.div,
-.root {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.div {
-  align-self: stretch;
-  background-color: var(--color-whitesmoke);
-  padding: 0 0 var(--padding-5xl);
-  gap: 24px;
-  max-width: 100%;
-}
-.root {
+.home {
   width: 100%;
   position: relative;
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   border: 2px solid #ced4da;
+  box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 0 0 489px;
   gap: 85px;
   line-height: normal;
   letter-spacing: normal;
 }
 @media screen and (max-width: 750px) {
-  .root {
+  .home {
     gap: 42px;
   }
 }
 @media screen and (max-width: 450px) {
-  .root {
+  .home {
     gap: 21px;
   }
 }
