@@ -1,0 +1,15 @@
+.checkboxText {
+  position: absolute;
+  top: 6.25%;
+  left: 0;
+  line-height: 100%;
+}
+.basecheckboxcontentstates {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  text-align: left;
+  font-size: var(--component-body-regular-size);
+  color: var(--neutrals-text-primary);
+  font-family: var(--component-body-regular);
+}

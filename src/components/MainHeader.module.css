@@ -1,0 +1,115 @@
+.brandLogoIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frame {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.stockmasterPro {
+  text-decoration: none;
+  top: 2px;
+  left: 32px;
+  line-height: 20px;
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+}
+.div1,
+.imgIcon,
+.stockmasterPro {
+  position: absolute;
+}
+.div1 {
+  top: 18px;
+  left: 16px;
+  background-color: var(--color-gray-300);
+  width: 194.1px;
+  height: 28px;
+}
+.imgIcon {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-9980xl);
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+.johnSmith {
+  text-decoration: none;
+  position: absolute;
+  top: 6px;
+  left: 40px;
+  line-height: 16px;
+  color: inherit;
+  display: inline-block;
+  min-width: 85px;
+  white-space: nowrap;
+}
+.userSettingsIcon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.userActions {
+  position: absolute;
+  top: 8px;
+  left: 133px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.div2,
+.div3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-300);
+  width: 100%;
+  height: 100%;
+}
+.div2 {
+  top: 16px;
+  left: 1115px;
+  width: 149px;
+  height: 32px;
+  font-size: var(--font-size-base);
+  color: var(--color-darkslategray-100);
+}
+.div,
+.header {
+  position: absolute;
+  top: 0;
+}
+.div {
+  height: calc(100% - 1px);
+  bottom: 1px;
+  left: 80px;
+  background-color: var(--color-gray-300);
+  width: 1280px;
+}
+.header {
+  left: 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-gainsboro);
+  box-sizing: border-box;
+  width: 100%;
+  height: 65px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+  font-family: var(--component-body-regular);
+}

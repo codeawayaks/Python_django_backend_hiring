@@ -6,6 +6,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import Root from "./pages/Root";
+import ProductAddSuccess from "./pages/ProductAddSuccess";
+import StockUpdateSuccess from "./pages/StockUpdateSuccess";
+import CreateProduct from "./components/CreateProduct";
+import StockUpdate from "./components/StockUpdate";
 
 function App() {
   const action = useNavigationType();
@@ -24,6 +28,22 @@ function App() {
 
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/createProduct":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/stockUpdate":
+        title = "";
+        metaDescription = "";
+        break;        
+      case "/productaddsuccess":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/stockupdatesuccess":
         title = "";
         metaDescription = "";
         break;
@@ -46,6 +66,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Root />} />
+      <Route path="/home" element={<Root />} />
+      <Route path="/productaddsuccess" element={<ProductAddSuccess />} />
+      <Route path="/stockupdatesuccess" element={<StockUpdateSuccess />} />
+      <Route path="/createProduct" element={<CreateProduct />} />
+      <Route path="/stockUpdate" element={<StockUpdate />} />
     </Routes>
   );
 }
