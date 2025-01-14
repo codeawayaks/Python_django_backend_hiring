@@ -1,7 +1,8 @@
 import { FunctionComponent, useCallback } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import styles from "./ProductAddSuccess.module.css";
+import Header from "../components/Header";
 
 const ProductAddSuccess: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -11,57 +12,43 @@ const ProductAddSuccess: FunctionComponent = () => {
   }, [navigate]);
 
   return (
-    <div className={styles.productaddsuccess}>
-      <section className={styles.app}>
-        <header className={styles.header}>
-          <div className={styles.headerInner}>
-            <div className={styles.brandContainer}>
-              <img
-                className={styles.brandLogoIcon}
-                loading="lazy"
-                alt=""
-                src="/frame.svg"
-              />
-              <a className={styles.stockmasterPro}>StockMaster Pro</a>
-            </div>
-          </div>
-          <div className={styles.userPanel}>
-            <img
-              className={styles.imgIcon}
-              loading="lazy"
-              alt=""
-              src="/img@2x.png"
-            />
-            <div className={styles.userInfo}>
-              <a className={styles.johnSmith}>John Smith</a>
-            </div>
-            <div className={styles.userActions}>
-              <img
-                className={styles.notificationsIcon}
-                loading="lazy"
-                alt=""
-                src="/frame-1.svg"
-              />
-            </div>
-          </div>
-        </header>
-        <div className={styles.pageTitle}>
+    <div className={styles.stockupdatesuccess}>
+      <Header />
+      <section className={styles.main}>
+        <div className={styles.navigation}>
           <div className={styles.productsCreateContainer}>
             <span>{`Products > `}</span>
             <span className={styles.createProduct}>Create Product</span>
           </div>
         </div>
       </section>
-      <section className={styles.content}>
-        <div className={styles.successMessage}>
-          <div className={styles.messagePanel}>
-            <h1 className={styles.productAddedSuccessfully}>
-              Product Added Successfully
-            </h1>
-          </div>
-          <div className={styles.button} onClick={onButtonContainerClick}>
-            <h1 className={styles.home}>Home</h1>
-          </div>
+      <section>
+        <div
+          className={styles.successMessageContent}
+          style={{ textAlign: "center" }}
+        >
+          <h1 className={styles.stockUpdatedSuccessfully}>
+            Product Added Successfully
+          </h1>
+          <Button
+            className={styles.button1}
+            disableElevation
+            variant="contained"
+            sx={{
+              textTransform: "none",
+              color: "#fff",
+              fontSize: "14",
+              background: "#2563eb",
+              borderRadius: "6px",
+              "&:hover": { background: "#2563eb" },
+              width: 153.1,
+              height: 36,
+              marginRight: "20px",
+            }}
+            onClick={onButtonContainerClick}
+          >
+            Home
+          </Button>
         </div>
       </section>
     </div>

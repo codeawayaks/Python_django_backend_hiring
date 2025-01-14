@@ -5,73 +5,60 @@
   color: var(--color-black);
 }
 .productsCreateContainer {
-  position: absolute;
-  top: 89px;
-  left: 96px;
   font-size: var(--component-body-regular-size);
   font-family: var(--component-body-regular);
   text-align: left;
 }
 .separator {
-  position: absolute;
-  top: 212px;
-  left: 80px;
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   border: 1px solid var(--color-gainsboro);
   box-sizing: border-box;
   width: 612px;
-  height: 244px;
+  padding: 18px;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.div,
-.div1,
-.minimumStock,
-.stockItem {
-  position: absolute;
-  top: 398px;
+
+.div1 {
+  font-family: var(--component-body-regular);
+  font-size: var(--font-size-base);
+  color: var(--color-darkgray);
+  width: 245px;
+}
+
+.div {
+  border: 0;
+  background-color: transparent;
   font-family: var(--component-body-regular);
   font-size: var(--font-size-base);
   color: var(--color-darkgray);
 }
-.div {
-  border: 0;
-  background-color: transparent;
-  left: 146px;
-}
-.div1,
-.minimumStock,
-.stockItem {
-  left: 440px;
-}
-.minimumStock,
-.stockItem {
-  top: 373px;
-  left: 96px;
+
+.minimumStock {
   font-size: var(--component-body-regular-size);
   font-weight: 600;
   color: var(--color-dimgray);
   text-align: left;
+  margin-bottom: 8px;
 }
-.minimumStock {
-  left: 440px;
-  display: inline-block;
-  min-width: 105px;
+ 
+.stockItem {
+  font-size: var(--component-body-regular-size);
+  font-weight: 600;
+  color: var(--color-dimgray);
+  text-align: left;
+  margin-bottom: 8px;
 }
 .buttonIcon {
-  position: absolute;
-  top: 398px;
-  left: 374px;
   border-radius: var(--br-7xs);
   width: 42px;
   height: 42px;
 }
-.buttonIcon1,
-.div2 {
-  position: absolute;
-  left: 96px;
-}
+
 .buttonIcon1 {
-  top: 398px;
   border-radius: var(--br-7xs);
   width: 42px;
   height: 42px;
@@ -79,30 +66,26 @@
 .div2 {
   border: 0;
   background-color: transparent;
-  top: 307px;
   font-family: var(--component-body-regular);
   font-size: var(--font-size-base);
   color: var(--color-darkgray);
 }
 .stockKeepingUnit {
-  top: 282px;
-  left: 96px;
   font-size: var(--component-body-regular-size);
   font-weight: 600;
   color: var(--color-dimgray);
   text-align: left;
   display: inline-block;
   min-width: 129px;
+  font-family: var(--component-body-regular);
+  margin-bottom: 8px;
 }
-.home,
-.manageStock,
-.stockKeepingUnit {
+.home {
   position: absolute;
   font-family: var(--component-body-regular);
 }
 .manageStock {
-  top: 228px;
-  left: 96px;
+  font-family: var(--component-body-regular);
   font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--color-black);
@@ -119,8 +102,7 @@
   color: var(--color-white);
   text-align: center;
 }
-.button,
-.button1 {
+.button {
   position: absolute;
   cursor: pointer;
 }
@@ -132,15 +114,12 @@
   width: 240px;
   height: 95px;
 }
-.button1 {
-  top: 480px;
-  left: 499px;
-}
+
 .stockupdate {
-  margin: 0;
+  /* margin: auto;
   width: 1440px;
-  height: 1057px;
-  background-color: var(--color-whitesmoke);
+  height: 1057px; */
+  /* background-color: var(--color-whitesmoke); */
   max-width: 100%;
   overflow: hidden;
   line-height: normal;

@@ -16,6 +16,7 @@ import Header1 from "./Header1";
 import { useNavigate } from "react-router-dom";
 import CheckBox from "./CheckBox";
 import styles from "./CreateProduct.module.css";
+import Header from "./Header";
 
 export type CreateProductType = {
   className?: string;
@@ -32,7 +33,7 @@ const CreateProduct: FunctionComponent<CreateProductType> = ({
 
   return (
     <div className={[styles.createproduct, className].join(" ")}>
-      <Header1 />
+      <Header />
       <div className={styles.button}>
         <div className={styles.add}>Add</div>
       </div>
@@ -60,6 +61,9 @@ const CreateProduct: FunctionComponent<CreateProductType> = ({
                   "&:hover": { background: "#fff" },
                   width: 153.1,
                   height: 36,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 Cancel
@@ -77,6 +81,9 @@ const CreateProduct: FunctionComponent<CreateProductType> = ({
                   "&:hover": { background: "#2563eb" },
                   width: 153.1,
                   height: 36,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
                 onClick={onButtonClick}
               >
@@ -143,71 +150,80 @@ const CreateProduct: FunctionComponent<CreateProductType> = ({
               <div className={styles.productPricing}>
                 <div className={styles.productPricingChild} />
                 <div className={styles.pricing}>Pricing</div>
-                <div className={styles.pricingDetails}>
-                  <div className={styles.priceFields}>
-                    <div className={styles.originalPriceField}>
-                      <div className={styles.productName}>Original Price</div>
-                    </div>
-                    <div className={styles.discountOptional}>
-                      <span className={styles.discount}>{`Discount `}</span>
-                      <span className={styles.optional}>Optional</span>
-                    </div>
-                    <div className={styles.discountedPrice}>
-                      Discounted Price
-                    </div>
+                <div style={{ display: "flex", gap: "15px" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <div className={styles.productName}>Original Price</div>
+                    <TextField
+                      className={styles.input}
+                      variant="outlined"
+                      sx={{
+                        "& fieldset": { borderColor: "#e5e7eb" },
+                        "& .MuiInputBase-root": {
+                          height: "42px",
+                          backgroundColor: "#fff",
+                          borderRadius: "8px",
+                        },
+                        width: "182px",
+                      }}
+                    />
                   </div>
-                  <div className={styles.discountedPrice1}>
-                    <div className={styles.priceInputs}>
-                      <TextField
-                        className={styles.input}
-                        variant="outlined"
-                        sx={{
-                          "& fieldset": { borderColor: "#e5e7eb" },
-                          "& .MuiInputBase-root": {
-                            height: "42px",
-                            backgroundColor: "#fff",
-                            borderRadius: "8px",
-                          },
-                          width: "182px",
-                        }}
-                      />
-                      <TextField
-                        className={styles.input}
-                        variant="outlined"
-                        sx={{
-                          "& fieldset": { borderColor: "#e5e7eb" },
-                          "& .MuiInputBase-root": {
-                            height: "42px",
-                            backgroundColor: "#fff",
-                            borderRadius: "8px",
-                          },
-                          width: "182px",
-                        }}
-                      />
-                      <TextField
-                        className={styles.input}
-                        variant="outlined"
-                        sx={{
-                          "& fieldset": { borderColor: "#e5e7eb" },
-                          "& .MuiInputBase-root": {
-                            height: "42px",
-                            backgroundColor: "#fff",
-                            borderRadius: "8px",
-                          },
-                          width: "182px",
-                        }}
-                      />
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <div className={styles.productName}>
+                      Discount (Optional)
                     </div>
-                    <div className={styles.saleToggle}>
-                      <img
-                        className={styles.switchIcon}
-                        alt=""
-                        src="/switch.svg"
-                      />
-                      <div className={styles.saleLabel}>
-                        <div className={styles.onSale}>On Sale</div>
-                      </div>
-                    </div>
+                    <TextField
+                      className={styles.input}
+                      variant="outlined"
+                      sx={{
+                        "& fieldset": { borderColor: "#e5e7eb" },
+                        "& .MuiInputBase-root": {
+                          height: "42px",
+                          backgroundColor: "#fff",
+                          borderRadius: "8px",
+                        },
+                        width: "182px",
+                      }}
+                    />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <div className={styles.productName}>Discounted Price</div>
+                    <TextField
+                      className={styles.input}
+                      variant="outlined"
+                      sx={{
+                        "& fieldset": { borderColor: "#e5e7eb" },
+                        "& .MuiInputBase-root": {
+                          height: "42px",
+                          backgroundColor: "#fff",
+                          borderRadius: "8px",
+                        },
+                        width: "182px",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <img className={styles.switchIcon} alt="" src="/switch.svg" />
+                  <div className={styles.saleLabel}>
+                    <div className={styles.onSale}>On Sale</div>
                   </div>
                 </div>
               </div>
@@ -531,12 +547,14 @@ const CreateProduct: FunctionComponent<CreateProductType> = ({
                         <FormHelperText />
                       </FormControl>
                     </div>
-                    <CheckBox />
-                    <CheckBox checkBoxTop="unset" />
+                    <div style={{display: "flex", gap:"15px"}}>
+                      <CheckBox />
+                      <CheckBox checkBoxTop="unset" />
+                    </div>
                   </div>
                 </div>
               </div>
-              <Button
+              {/* <Button
                 className={styles.homeButton}
                 disableElevation
                 variant="text"
@@ -550,7 +568,7 @@ const CreateProduct: FunctionComponent<CreateProductType> = ({
                 }}
               >
                 Home
-              </Button>
+              </Button> */}
             </div>
           </form>
         </div>

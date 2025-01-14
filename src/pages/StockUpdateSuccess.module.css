@@ -90,12 +90,10 @@
 .productsCreateContainer {
   position: relative;
 }
-.main,
 .navigation {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 100%;
 }
 .navigation {
   flex-direction: row;
@@ -103,16 +101,15 @@
   box-sizing: border-box;
 }
 .main {
-  align-self: stretch;
   flex-direction: column;
   gap: var(--gap-5xl);
-  top: 0;
-  z-index: 99;
-  position: sticky;
   text-align: left;
   font-size: var(--component-body-regular-size);
   color: var(--color-dimgray);
   font-family: var(--component-body-regular);
+  width: "1350px";
+  margin: "auto";
+  padding-top: 20px;
 }
 .stockUpdatedSuccessfully {
   margin: 0;
@@ -121,16 +118,20 @@
   font-size: inherit;
   font-weight: 600;
   font-family: inherit;
+  font-family: var(--component-body-regular);
+  color: var(--color-dimgray);
 }
 .successMessageContent {
-  width: 483px;
+  width: 100vw;
+  height: 85vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  gap: 20px;
   padding: var(--padding-10xl) 0 0;
   box-sizing: border-box;
-  max-width: 100%;
+  font-size: var(--font-size-13xl);
 }
 .home {
   margin: 0;
@@ -185,12 +186,9 @@
 .stockupdatesuccess {
   width: 100%;
   position: relative;
-  background-color: var(--color-whitesmoke);
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 0 418px;
-  gap: 438px;
   line-height: normal;
   letter-spacing: normal;
 }

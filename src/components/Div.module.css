@@ -651,7 +651,7 @@
 }
 .div {
   align-self: stretch;
-  background-color: var(--color-whitesmoke);
+  /* background-color: var(--color-whitesmoke); */
   padding: 0 0 var(--padding-5xl);
   box-sizing: border-box;
   gap: var(--gap-5xl);

@@ -1,7 +1,8 @@
 import { FunctionComponent, useCallback } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import styles from "./StockUpdateSuccess.module.css";
+import Header from "../components/Header";
 
 const StockUpdateSuccess: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -12,39 +13,8 @@ const StockUpdateSuccess: FunctionComponent = () => {
 
   return (
     <div className={styles.stockupdatesuccess}>
+      <Header />
       <section className={styles.main}>
-        <header className={styles.header}>
-          <div className={styles.brandLogoWrapper}>
-            <div className={styles.brandNameWrapper}>
-              <img
-                className={styles.brandLogoContainer}
-                loading="lazy"
-                alt=""
-                src="/frame.svg"
-              />
-              <a className={styles.stockmasterPro}>StockMaster Pro</a>
-            </div>
-          </div>
-          <div className={styles.userInfoWrapper}>
-            <img
-              className={styles.imgIcon}
-              loading="lazy"
-              alt=""
-              src="/img@2x.png"
-            />
-            <div className={styles.userNameWrapper}>
-              <a className={styles.johnSmith}>John Smith</a>
-            </div>
-            <div className={styles.userActions}>
-              <img
-                className={styles.userActionsContainer}
-                loading="lazy"
-                alt=""
-                src="/frame-1.svg"
-              />
-            </div>
-          </div>
-        </header>
         <div className={styles.navigation}>
           <div className={styles.productsCreateContainer}>
             <span>{`Products > `}</span>
@@ -52,16 +22,33 @@ const StockUpdateSuccess: FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <section className={styles.content}>
-        <div className={styles.successMessageWrapper}>
-          <div className={styles.successMessageContent}>
-            <h1 className={styles.stockUpdatedSuccessfully}>
-              Stock Updated Successfully
-            </h1>
-          </div>
-          <div className={styles.button} onClick={onButtonContainerClick}>
-            <h1 className={styles.home}>Home</h1>
-          </div>
+      <section>
+        <div
+          className={styles.successMessageContent}
+          style={{ textAlign: "center" }}
+        >
+          <h1 className={styles.stockUpdatedSuccessfully}>
+            Stock Updated Successfully
+          </h1>
+          <Button
+            className={styles.button1}
+            disableElevation
+            variant="contained"
+            sx={{
+              textTransform: "none",
+              color: "#fff",
+              fontSize: "14",
+              background: "#2563eb",
+              borderRadius: "6px",
+              "&:hover": { background: "#2563eb" },
+              width: 153.1,
+              height: 36,
+              marginRight: "20px",
+            }}
+            onClick={onButtonContainerClick}
+          >
+            Home
+          </Button>
         </div>
       </section>
     </div>
